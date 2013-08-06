@@ -4,9 +4,9 @@ FactoryGirl.define do
     email    "test1@test.com"	
   end
 
-  factory :micropost do
-    body "Lorem ipsum"
+  factory :article do
     title "The Title"
+    body "Lorem ipsum"
     user
   end
 end
