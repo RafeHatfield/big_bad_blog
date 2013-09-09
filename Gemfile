@@ -11,6 +11,7 @@ gem 'coffee-rails', '4.0.0'
 gem 'jquery-rails', '2.2.1'
 gem 'turbolinks'
 gem 'debugger'
+gem 'devise', '3.1.0'
 
 group :development do
   gem 'better_errors'

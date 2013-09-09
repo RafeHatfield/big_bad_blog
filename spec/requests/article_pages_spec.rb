@@ -30,7 +30,7 @@ describe "Article pages" do
     it { should have_content(article.title) }
     it { should have_content(article.body) }
     it { should have_title(article.title) }
-    it { should have_content(user.name) }
+    # it { should have_content(user.name) }
     # it { should have_link(user.name, href: user_path(user)) }
 
   end
@@ -40,7 +40,7 @@ describe "Article pages" do
     let(:user) { FactoryGirl.create(:user) }
 
     before do 
-      # sign_in user
+      sign_in user
       visit new_article_path
     end
 
