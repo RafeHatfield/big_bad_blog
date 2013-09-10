@@ -1,0 +1,7 @@
+<% @articles.each_with_index do |article, i| %>
+
+  <li<% if i == 0 %> class="first"<% elsif i == @articles.length - 1 %> class="last"<% end %>>
+    <%= render 'articles/feed_item', article: article %>
+  </li>
+
+<% end %>

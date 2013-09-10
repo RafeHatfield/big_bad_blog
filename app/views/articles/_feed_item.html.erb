@@ -1,0 +1,14 @@
+<article class="blog-post">
+  <div class="published">Mar 6, 2013</div>     
+  <h1>
+  	<%= link_to article.title, article_path(article) %>
+  </h1>
+
+  <p><%= article.body %>&nbsp;… <%= link_to 'more', article_path(article) %> | <%= link_to "edit", edit_article_path(article) %> | 
+    <%= link_to "delete", article_path(article), method: :delete, data: {confirm: "Really delete the article?"} %></p>
+
+  <p class="tags">
+      <span>Tags:</span>
+      <a href="#">Lorem</a>, <a href="#">Ipsum</a>, <a href="#">Linux</a>, <a href="#">Mac</a>, <a href="#">Ruby</a>, <a href="#">Rails</a>
+  </p>
+</article>
