@@ -2,6 +2,6 @@ class Article < ActiveRecord::Base
   belongs_to :user
 
   validates :body, presence: true
-  validates :title, presence: true, length: { maximum: 240 }
+  validates :title, presence: true
   validates :user_id, presence: true
 end

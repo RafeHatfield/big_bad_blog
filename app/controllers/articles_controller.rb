@@ -14,11 +14,13 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-    @article = Article.new(article_params)
-    debugger
-    @article.save
-
-    redirect_to article_path(@article)
+    @article = current_user.articles.build(article_params)
+    if @article.save
+    	flash[:success] = 'Article created.'
+    	redirect_to article_path(@article)
+    else
+    	render 'new'
+    end
 	end
 
 	def destroy
@@ -34,11 +36,12 @@ class ArticlesController < ApplicationController
 
 	def update
 	  @article = Article.find(params[:id])
-	  @article.update(article_params)
-
-	  flash.notice = "Article '#{@article.title}' Updated!"
-
-	  redirect_to article_path(@article)
+	  if @article.update(article_params)
+			flash.notice = "Article '#{@article.title}' Updated."
+			redirect_to @article
+		else
+			render 'edit'
+		end
 	end
 
 	private

@@ -1,6 +1,6 @@
 # Ignore bundler config.
 /.bundle
-
+/public/blog-design
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -11,6 +11,8 @@
 
 # Ignore other unneeded files.
 database.yml
+/config/application.yml
+
 doc/
 *.swp
 *~
@@ -18,3 +20,5 @@ doc/
 .DS_Store
 .idea
 .secret
+# Ignore application configuration
+/config/application.yml
