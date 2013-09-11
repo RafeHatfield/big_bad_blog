@@ -115,7 +115,7 @@ body {
 
 
 .seperator {
-  background-image:url('../img/threedots.png'); 
+  background-image:image-url("threedots.png"); 
   height:6px;
     margin:100px auto; /*top  bottom left right*/
   width:35px;
@@ -505,7 +505,7 @@ ul.blog-posts {
 }
 
 ul.blog-posts li {
-    background-image:url('../img/threedots.png'); 
+    background-image:image-url("threedots.png"); 
     background-position:bottom center;
     background-repeat:no-repeat;
     margin-bottom:60px;
@@ -552,9 +552,6 @@ ul.blog-posts li.last {
 .notfound-message {
  text-align:center;   
 }
-
-
-
 
 
 
@@ -665,7 +662,7 @@ article.comment h4 {
 }
 
 #comments {
-    background-image: url('../img/threedots.png');
+    background-image: image-url("threedots.png");
     background-position:center top;
     background-repeat:no-repeat;
     margin-top: 100px;
@@ -786,11 +783,11 @@ aside.aside-column article.widget header h1 {
 /***** 7. Misc *****/
 
 .glyphicons-icon {
-  background-image: url(../img/glyphicons/glyphicons-darkgrey.svg);
+  background-image: image-url("glyphicons/glyphicons-darkgrey.svg");
 }
 
 .halflings-icon {
-  background-image: url(../img/glyphicons/glyphicons_halflings-darkgrey.svg);
+  background-image: image-url("glyphicons/glyphicons_halflings-darkgrey.svg");
 }
 
 #logo {
