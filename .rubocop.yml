@@ -1,0 +1,8 @@
+LineLength:
+  Max: 255
+Excludes:
+  - db/**
+  - config/**
+  - script/**
+Documentation:
+  Enabled: false

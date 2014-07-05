@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.1.1'
 gem 'bcrypt-ruby', '3.0.1'
-gem 'thin'
-gem 'sass-rails', '4.0.0'
+gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.0'
 gem 'jquery-rails', '2.2.1'
 gem 'turbolinks'
-gem 'debugger'
-gem 'devise', '3.1.0'
+gem 'devise', '~> 3.2'
 gem 'figaro'
+gem 'pg'
+gem 'rack-cache'
 
 group :development do
   gem 'better_errors'
@@ -23,23 +23,36 @@ group :development do
   gem 'rubocop', require: false
   gem 'quiet_assets'
   gem 'meta_request'
-  # gem 'bullet'
+  gem 'bullet'
+  gem 'annotate'
+  gem 'awesome_print'
+  gem 'xray-rails'
+  gem 'letter_opener'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-spring'
+  gem 'terminal-notifier-guard'
+  gem 'progress_bar'
 end
 
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
-  gem 'debugger'
-  gem 'zeus'
-  gem 'sqlite3', '~> 1.3.3'
   gem 'byebug'
+  gem 'faker'
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :test do
-  # gem 'selenium-webdriver', '2.0.0'
-  gem 'capybara'
+  gem 'simplecov', require: false
+  gem 'codeclimate-test-reporter', require: nil
   gem 'database_cleaner', '<= 1.0.1'
   gem 'email_spec'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
+  gem 'headless'
 end
 
 group :doc do
@@ -48,7 +61,6 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
+  gem 'unicorn'
 end
-
